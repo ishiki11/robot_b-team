@@ -1,5 +1,5 @@
-#ifndef SIMPLE_TIMER_H
-#define SIMPLE_TIMER_H
+#ifndef SIMPLETIMER_H_
+#define SIMPLETIMER_H_
 
 #include "ev3api.h"
 

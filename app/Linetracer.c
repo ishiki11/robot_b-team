@@ -1,25 +1,24 @@
-#include "Linetracer.h"
+#include "ev3api.h"
+#include "LineTracer.h"
 #include "Walker.h"
-#include "Linemonitor.h"
-#include "Linetracerwithstarter.h"
 
 static void calcDirection();
+static bool_t isline;
 
-void linetracer_init()
-{
-    walker_init();
-    line_monitor_init();
+// 初期設定
+void linetracer_init() {
+  walker_init();
+  line_monitor_init();
 }
 
-void linetracer_run()
-{
-    bool_t isLine;
-    reset();
-    isLine = isOnLine();
-    calcDirection();
+// 走る
+void linetracer_run() {
+  reset();
+  isline = isOnLine();
+  calcDirection();
 }
 
-static void calcDirection()
-{
-    walker_run(isOnLine);
+// 走行体の向きを決める
+static void calcDirection() {
+  walker_run(isline);
 }

@@ -1,8 +1,7 @@
-#ifndef SCENARIO_TRACER_H
-#define SCENARIO_TRACER_H
+#ifndef SCENARIO_TRACER_H_
+#define SCENARIO_TRACER_H_
 
 void scenario_tracer_init();
 void scenario_tracer_run();
-
 
 #endif
