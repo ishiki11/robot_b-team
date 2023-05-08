@@ -9,8 +9,10 @@ APPL_COBJS += \
   LineTracer.o\
 APPL_LIBS += -lm
 APPL_DIRS += \
-  $(mkfile_path)app\
-  $(mkfile_path)unit
+  $(mkfile_path)control\
+  $(mkfile_path)device\
+  $(mkfile_path)system\
 INCLUDES += \
-  -I$(mkfile_path)app\
-  -I$(mkfile_path)unit
+  -I$(mkfile_path)control\
+  -I$(mkfile_path)device\
+  -I$(mkfile_path)system\
