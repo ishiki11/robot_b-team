@@ -2,6 +2,8 @@
 #include "LineMonitoring.h"
 #include "ColorSensor.h"
 
+static int threshold;
+
 bool is_detexting_line(int thereshold){
 
 }
