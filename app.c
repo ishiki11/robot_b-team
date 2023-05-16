@@ -1,6 +1,6 @@
 #include "app.h"
 #include <stdio.h>
-#include "RandomWalker.h"
+#include "linetracer.h"
 
 // センサーポートの定義
 static const sensor_port_t color_sensor = EV3_PORT_2;
@@ -30,5 +30,5 @@ void run_task() {
   if(ev3_button_is_pressed(RIGHT_BUTTON)) {
     wup_tsk(MAIN_TASK);
   }
-  random_walker_run();
+  running_tracerd_line();
 }
