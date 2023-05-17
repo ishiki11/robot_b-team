@@ -17,7 +17,7 @@ void main_task(intptr_t exinf)
   ev3_motor_config(left_motor    ,MEDIUM_MOTOR);
   ev3_motor_config(right_motor   ,MEDIUM_MOTOR);
     
-  random_walker_init()
+  random_walker_init() //LineTracerクラスの時に変えてください
   
   sta_cyc(LINE_TRACER_TASK_CYC);
   // タスクを終了する
@@ -27,7 +27,7 @@ void main_task(intptr_t exinf)
 }
 
 void run_task() {
-  if(ev3_button_is_pressed(RIGHT_BUTTON)) {
+  if(ev3_button_is_pressed(LEFT_BUTTON)) {
     wup_tsk(MAIN_TASK);
   }
   running_tracerd_line();
