@@ -8,13 +8,13 @@ int get_value() {
   color_id = ev3_color_sensor_get_color(color_sensor);
   color_value = 0;
   switch(color_id) {
-    case BLACK:
+    case COLOR_BLACK:
       color_value = 1;
       break;
-    case WHITE:
+    case COLOR_WHITE:
       color_value = 2;
       break;
-    case RED:
+    case COLOR_RED:
       color_value = 3;
       break;
   }
