@@ -2,7 +2,6 @@
 static const sensor_port_t color_sensor = EV3_PORT_2;
 
 int get_value() {
-  static int reflect = 0;
   static int color_value = 0;
 
   color_id = ev3_color_sensor_get_color(color_sensor);
@@ -14,7 +13,7 @@ int get_value() {
     case COLOR_WHITE:
       color_value = 2;
       break;
-    case COLOR_RED:
+    case COLOR_BLUE:
       color_value = 3;
       break;
   }
