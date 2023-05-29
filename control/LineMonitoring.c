@@ -16,11 +16,11 @@ bool is_detexting_line(int threshold) {
   }
 }
 
-// ゴールの印を検知する
-bool is_detexts_goal_marker(int threshold) {
+// ブルーライン検知（ダブルループに変更）
+bool is_detexts_blue_line(int threshold) {
   int value = get_value();
   if (value > threshold) {
-    // value = 3 赤
+    // value = 3 青
     return true;
   } else {
     return false;
