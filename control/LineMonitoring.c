@@ -2,12 +2,10 @@
 #include "LineMonitoring.h"
 #include "ColorSensor.h"
 
-static int threshold = 2;
-
 // ラインを検知する
 bool is_detexting_line(int threshold) {
   int value = get_value();
-  if (value < threshold) {
+  if (value == 1) {
     // value = 1 黒
     return true;
   } else {
@@ -19,7 +17,7 @@ bool is_detexting_line(int threshold) {
 // ブルーライン検知（ダブルループに変更）
 bool is_detexts_blue_line(int threshold) {
   int value = get_value();
-  if (value > threshold) {
+  if (value == 3) {
     // value = 3 青
     return true;
   } else {
