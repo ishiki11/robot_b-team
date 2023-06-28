@@ -19,8 +19,8 @@ int motor_spin_volume() {
 
 // モーターを停止する
 void motor_stop() {
-  ev3_motor_stop(left_motor, break)
-  ev3_motor_stop(right_motor, break)
+  ev3_motor_stop(left_motor, true)
+  ev3_motor_stop(right_motor, true)
 };
 
 // モーターを回転させる
