@@ -1,9 +1,18 @@
 #ifndef MOTOR_H_
 #define MOTOR_H_
 
+#include "ev3api.h"
+
+// モータを初期化する
 void motor_init();
-void motor_spin_volume();
+
+// モーターの回転量を取得する 
+int motor_spin_volume();
+
+// モーターを停止する
 void motor_stop();
-void motor_spin();
+
+// モーターを回転させる
+void motor_spin(int, int);
 
 #endif
