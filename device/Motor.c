@@ -24,7 +24,7 @@ void motor_stop() {
 };
 
 // モーターを回転させる
-void motor_spin() {
-  ev3_motor_set_power(left_motor, 40)
-  ev3_motor_set_power(right_motor, 40)
+void motor_spin(left_power, right_power) {
+  ev3_motor_set_power(left_motor, left_power)
+  ev3_motor_set_power(right_motor, right_power)
 };

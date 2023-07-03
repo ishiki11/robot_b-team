@@ -13,6 +13,6 @@ int motor_spin_volume();
 void motor_stop();
 
 // モーターを回転させる
-void motor_spin();
+void motor_spin(int, int);
 
 #endif
