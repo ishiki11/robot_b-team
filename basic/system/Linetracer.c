@@ -4,28 +4,29 @@
 #include "DirectionControl.h"
 #include "DistanceMonitoring.h"
 
+static bool_t isline
+
 // デバイスを初期化する
 void linetracer_init() {
-  motor_init()
+  // モーターの角位置をリセット
+  motor_init(); 
 }
 
 // 経路に沿って走行する
 void running_traced_line() {
-  // ラインを検知する
-  is_detexting_line()
+  // ライン上かどうか
+  isline = is_detexting_line()
 
-  // pid操作量を取得する
-  float c = get_pid_operating_volume()
+  // pid操作量を取得
+  float pid = get_pid_operating_volume()
+  // 向きを取得
+  int direction = calculate_travel_direction(pid)
 
-  // 走行する向きを計算する
-  int b = calculate_travel_direction()
-
-  // 走行した距離を取得する
-  int a = obtain_mileage(left,right)
-
-  // カーブかどうか調べる
-  bool_t is_curve()
-
-  // 位置による走行速度を取得
-  int d = obtain_running_speed(position)
+  if (isline) {
+    // 黒の時
+    motor_spin(40,30)
+  } else {
+    // 白の時
+    motor_spin(30,40)
+  }
 }
