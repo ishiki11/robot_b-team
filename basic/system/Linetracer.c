@@ -20,7 +20,7 @@ void running_traced_line() {
   // pid操作量を取得
   float pid[] = get_pid_operating_volume()
 
-  reflect = is_detexting_line();
+  reflect = get_value();
   // 向きを取得
   int direction = calculate_travel_direction(pid, reflect)
 
