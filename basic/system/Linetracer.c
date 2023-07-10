@@ -19,8 +19,10 @@ void running_traced_line() {
 
   // pid操作量を取得
   float pid[] = get_pid_operating_volume()
+
+  reflect = is_detexting_line();
   // 向きを取得
-  int direction = calculate_travel_direction(pid)
+  int direction = calculate_travel_direction(pid, reflect)
 
   if (isline) {
     // 黒の時
