@@ -6,6 +6,6 @@
 #define ROBOT_B_TEAM_DIRECTIONCONTROL_H
 
 float get_pid_operating_volume();
-int calculate_travel_direction(pid_value);
+int calculate_travel_direction(pid_value, reflect);
 
 #endif //ROBOT_B_TEAM_DIRECTIONCONTROL_H
