@@ -18,7 +18,7 @@ void running_traced_line() {
   // pid操作量を取得
   float pid[] = get_pid_operating_volume()
 
-  reflect = get_value();
+  int reflect = get_value();
   // 向きを取得
   int tern = calculate_travel_direction(pid, reflect)
   // 前進のパワーと操作量が100を超えていないか検証する
