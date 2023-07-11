@@ -4,5 +4,6 @@
 #include "ev3api.h"
 
 int get_value();
+int get_color();
 
 #endif
