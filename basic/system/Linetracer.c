@@ -5,7 +5,6 @@
 #include "DistanceMonitoring.h"
 #include "ColorSensor.h"
 
-static bool_t isline
 
 // デバイスを初期化する
 void linetracer_init() {
