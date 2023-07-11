@@ -16,7 +16,9 @@ void linetracer_init() {
 void running_traced_line() {
 
   // pid操作量を取得
-  float pid[] = get_pid_operating_volume()
+  float pid[] = get_pid_operating_volume();
+  int lpower = 0; // 左モーターのパワー
+  int rpower = 0; // 右モーターのパワー
 
   int reflect = get_value();
   // 向きを取得
