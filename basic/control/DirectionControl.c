@@ -23,8 +23,8 @@ int calculate_travel_direction(float pid_value, int reflect) {
 
   diff[0] = diff[1];  // 偏差を求める
   diff[1] = (threshold - reflect) // 偏差を取得するための情報がありません※引数
-  delta = 0.003;  // 周期時間
-  integral += (diff[1] + diff[0]) /2.0 * delta; // 
+  float delta = 0.003;  // 周期時間
+  integral += (diff[1] + diff[0]) / 2.0 * delta; // 
 
   int p = kp * diff[1]; //P制御の操作量
   int i = ki * integral; //I制御の操作量
