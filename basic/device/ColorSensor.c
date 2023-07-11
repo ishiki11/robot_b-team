@@ -1,11 +1,13 @@
 #include "LineMonitoring.h"
 static const sensor_port_t color_sensor = EV3_PORT_2;
 
+// 反射光の取得
 int get_value() {
   int reflect = ev3_color_sensor_get_reflect(sensor_port_t color_sensor)
   return reflect;
 }
 
+// 色の値を取得
 int get_color() {
   int color_value = 0;
 
