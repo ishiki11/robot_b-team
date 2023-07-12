@@ -7,7 +7,7 @@ APPL_COBJS += \
   Motor.o \
   DirectionControl.o \
   Linetracer.o \
-  LineTracerWithStarter.o \
+  Runner.o \
   Starter.o \
   app.c
 APPL_LIBS += -lm
