@@ -1,4 +1,4 @@
-#include "LineTracerWithStarter.h"
+#include "Runner.h"
 #include "LineTracer.h"
 #include "Starter.h"
 
@@ -9,16 +9,17 @@ typedef enum {
 } State_t;
 static State_t state;
 
-void linetracer_with_starter_init() {
+void Runner_init() {
   state = UNDEFINED;
   linetracer_init();
   starter_init();
 }
 
-void linetracer_with_starter_run() {
+void Runner_run() {
   switch (state) {
     case UNDEFINED:
-      state = WALKING_FOR_START; break;
+      state = WALKING_FOR_START;
+      break;
     case WALKING_FOR_START:
       if(starter_is_pushed())
       {
@@ -26,7 +27,7 @@ void linetracer_with_starter_run() {
       }
       break;
     case WALKING:
-      linetracer_run();
+      running_traced_line();
       break;
     default:
       break;

@@ -1,9 +1,9 @@
-#ifndef LINE_TRACER_WITH_STARTER_H_
-#define LINE_TRACER_WITH_STARTER_H_
+#ifndef RUNNER_H_
+#define RUNNER_H_
 
 /* 公開の関数宣言 */
-void linetracer_with_starter_init();
+void Runner_init();
 // 走る
-void linetracer_with_starter_run();
+void Runner_run();
 
 #endif
